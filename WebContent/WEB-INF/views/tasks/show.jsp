@@ -34,6 +34,7 @@
         </table>
 
         <p><a href="${pageContext.request.contextPath}/index">一覧へ戻る</a></p>
+        <p><a href="${pageContext.request.contextPath}/edit?id=${task.id}">このクエストを編集する</a></p>
 
 
     </c:param>
