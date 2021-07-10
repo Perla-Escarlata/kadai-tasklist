@@ -18,11 +18,11 @@
                         </tr>
 
                         <tr>
-                            <th>名称</th>
+                            <th>クエストタイトル</th>
                             <td><c:out value="${task.title}" /></td>
                         </tr>
                         <tr>
-                            <th>詳細</th>
+                            <th>クエスト詳細</th>
                             <td><c:out value="${task.content}" /></td>
                         </tr>
                         <tr>

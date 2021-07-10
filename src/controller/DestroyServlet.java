@@ -33,6 +33,7 @@ public class DestroyServlet extends HttpServlet {
             em.getTransaction().begin();
             em.remove(t);
             em.getTransaction().commit();
+            request.getSession().setAttribute("flush", "削除完了！");
             em.close();
 
             //セッションスコープの中身を削除
