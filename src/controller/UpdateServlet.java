@@ -54,11 +54,11 @@ public class UpdateServlet extends HttpServlet {
                 request.setAttribute("task", t);
                 request.setAttribute("errors", errors);
 
-                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/new.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/edit.jsp");
                 rd.forward(request, response);
             } else {
                 // データベースに保存
-                em.persist(t);
+                em.getTransaction().begin();
                 em.getTransaction().commit();
                 request.getSession().setAttribute("flush", "更新完了！");
                 em.close();
